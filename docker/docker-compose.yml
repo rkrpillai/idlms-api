@@ -1,0 +1,14 @@
+# docker/docker-compose.yml
+
+version: '3.8'
+
+services:
+  nest-app:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+
